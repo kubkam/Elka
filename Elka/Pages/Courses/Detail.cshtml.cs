@@ -10,6 +10,9 @@ namespace Elka.Pages.Courses
         private readonly ICourseData _courseData;
         public Course Course { get; set; }
 
+        [TempData]
+        public string Message { get; set; }
+
         public DetailModel(ICourseData courseData)
         {
             _courseData = courseData;

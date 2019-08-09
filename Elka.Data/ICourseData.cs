@@ -11,6 +11,7 @@ namespace Elka.Data
         IEnumerable<Course> GetCoursesByName(string name);
         Course GetById(int id);
         Course Update(Course updatedCourse);
+        Course Add(Course newCourse);
         int Commit();
     }
 
@@ -59,6 +60,15 @@ namespace Elka.Data
             }
 
             return course;
+        }
+
+        public Course Add(Course newCourse)
+        {
+            courses.Add(newCourse);
+            newCourse.Id = courses.Max(c => c.Id) + 1;
+            newCourse.Teacher.Id = courses.Max(t => t.Teacher.Id) + 1;
+
+            return newCourse;
         }
 
         public int Commit()

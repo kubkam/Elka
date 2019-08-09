@@ -19,7 +19,9 @@ namespace Elka.Core
         [Required]
         [Range(0, 100)]
         public byte InterestingLevel { get; set; }
+
         public string Descriptions { get; set; }
+
         [Required]
         [Range(0, 5)]
         public byte ECTS { get; set; }
