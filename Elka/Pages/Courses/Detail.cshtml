@@ -1,0 +1,29 @@
+﻿@page "{courseId:int}"
+
+@model Elka.Pages.Courses.DetailModel
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<h2>@Model.Course.Name</h2>
+
+<div>
+	Moniker: @Model.Course.Moniker
+</div>
+<div>
+	ECTS: @Model.Course.ECTS
+</div>
+<div>
+	Teacher: @Model.Course.Teacher.FirstName @Model.Course.Teacher.LastName
+</div>
+<div>
+	How easy: @Model.Course.HowEasy
+</div>
+<div>
+	Interesting level: @Model.Course.InterestingLevel
+</div>
+<div>
+	Descriptions: @Model.Course.Descriptions
+</div>
+
+<a asp-page="./List" class="btn btn-primary">All Courses</a>

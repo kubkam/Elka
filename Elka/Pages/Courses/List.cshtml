@@ -1,0 +1,52 @@
+﻿@page
+@model Elka.Pages.Courses.ListModel
+@{
+    ViewData["Title"] = "List";
+}
+
+<h1>Courses List</h1>
+
+<form method="get">
+	<div class="form-group">
+		<div class="input-group">
+			<input type="search" class="form-control" placeholder="Course's Name" asp-for="SearchTerm"/>
+			<div class="input-group-append">
+				<button class="btn btn-outline-secondary">Search</button>
+			</div>
+		</div>
+	</div>
+</form>
+
+
+<table class="table">
+	<tr style="font-weight: bold">
+		<td>Name</td>
+		<td>Moniker</td>
+		<td>ECTS</td>
+		<td>Teacher</td>
+		<td>How easy</td>
+		<td>Interesting Level</td>
+		
+	</tr>
+		@foreach (var c in Model.Courses)
+		{
+			<tr>
+				<td>@c.Name</td>
+				<td>@c.Moniker</td>
+				<td>@c.ECTS</td>
+				<td>@c.Teacher.FirstName @c.Teacher.LastName</td>
+				<td>@c.HowEasy</td>
+				<td>@c.InterestingLevel</td>
+				<td>
+					<a class="btn btn-lg"
+					   asp-page="./Detail" asp-route-courseId="@c.Id">
+						<button class="btn btn-light">Details</button>
+					</a>
+					<a class="btn btn-lg"
+					   asp-page="./Edit" asp-route-courseId="@c.Id">
+						<button class="btn btn-dark">Edit</button>
+					</a>
+				</td>
+			</tr>
+		}
+</table>
