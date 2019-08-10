@@ -1,4 +1,6 @@
 C:\Users\Kuba\Desktop\Elka\Elka.Data\bin\Debug\netcoreapp2.2\Elka.Data.deps.json
+C:\Users\Kuba\Desktop\Elka\Elka.Data\bin\Debug\netcoreapp2.2\Elka.Data.runtimeconfig.json
+C:\Users\Kuba\Desktop\Elka\Elka.Data\bin\Debug\netcoreapp2.2\Elka.Data.runtimeconfig.dev.json
 C:\Users\Kuba\Desktop\Elka\Elka.Data\bin\Debug\netcoreapp2.2\Elka.Data.dll
 C:\Users\Kuba\Desktop\Elka\Elka.Data\bin\Debug\netcoreapp2.2\Elka.Data.pdb
 C:\Users\Kuba\Desktop\Elka\Elka.Data\bin\Debug\netcoreapp2.2\Elka.Core.dll
