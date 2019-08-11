@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Elka.Core;
 
@@ -25,6 +26,36 @@ namespace Elka.Data
         {
             return courses
                 .Where(c => string.IsNullOrEmpty(name) || c.Name.Contains(name))
+                .OrderBy(c => c.Name);
+        }
+
+        public IEnumerable<Course> GetCoursesByTeacherFirstName(string name)
+        {
+            return courses
+                .Where(t => string.IsNullOrEmpty(name) || t.Teacher.FirstName.Contains(name))
+                .OrderBy(t => t.Teacher.FirstName);
+        }
+
+        public IEnumerable<Course> GetCoursesByTeacherLastName(string name)
+        {
+            return courses
+                .Where(t => string.IsNullOrEmpty(name) || t.Teacher.LastName.Contains(name))
+                .OrderBy(t => t.Teacher.LastName);
+        }
+
+        public IEnumerable<Course> GetCoursesByEcts(string ects)
+        {
+           var _ects = int.Parse(ects);
+
+            return courses
+                .Where(c => c.ECTS == _ects)
+                .OrderBy(c => c.Name);
+        }
+
+        public IEnumerable<Course> GetCoursesByMoniker(string moniker)
+        {
+            return courses
+                .Where(c => string.IsNullOrEmpty(moniker) || c.Moniker.Contains(moniker))
                 .OrderBy(c => c.Name);
         }
 

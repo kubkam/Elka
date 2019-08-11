@@ -1,7 +1,7 @@
 ﻿@page
 @model Elka.Pages.Courses.ListModel
 @{
-    ViewData["Title"] = "List";
+	ViewData["Title"] = "List";
 }
 
 <h1>Courses List</h1>
@@ -9,14 +9,30 @@
 <form method="get">
 	<div class="form-group">
 		<div class="input-group">
-			<input type="search" class="form-control" placeholder="Course's Name" asp-for="SearchTerm"/>
+			<input type="search" class="form-control" placeholder="Search" asp-for="SearchTerm" />
+			<!--<button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+			<div class="dropdown-menu">
+				<a class="dropdown-item" href="#">Course's Name</a>
+				<a class="dropdown-item" href="#">Course's Moniker</a>
+				<a class="dropdown-item" href="#">ECTS</a>
+				<a class="dropdown-item" href="#">Teacher's first name</a>
+				<a class="dropdown-item" href="#">Teacher's last name</a>
+				<div role="separator" class="dropdown-divider"></div>
+				<a class="dropdown-item" href="#">Separated link</a>
+			</div>-->
+			<select class="custom-select" id="inputGroupSelect04" asp-for="SearchChoice">
+				<option value="0" selected>Course's Name</option>
+				<option value="1">Course's Moniker</option>
+				<option value="2">ECTS (please enter a number from 0 to 5)</option>
+				<option value="3">Teacher's first name</option>
+				<option value="4">Teacher's last name</option>
+			</select>
 			<div class="input-group-append">
 				<button class="btn btn-outline-secondary">Search</button>
 			</div>
 		</div>
 	</div>
 </form>
-
 
 <table class="table">
 	<tr style="font-weight: bold">
@@ -26,7 +42,7 @@
 		<td>Teacher</td>
 		<td>How easy</td>
 		<td>Interesting Level</td>
-		
+
 	</tr>
 	@foreach (var c in Model.Courses)
 	{

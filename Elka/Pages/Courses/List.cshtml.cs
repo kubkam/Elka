@@ -17,6 +17,9 @@ namespace Elka.Pages.Courses
         [BindProperty(SupportsGet = true)]
         public string SearchTerm { get; set; }
 
+        [BindProperty(SupportsGet = true)]
+        public int SearchChoice { get; set; }
+
         public ListModel(ICourseData courseData)
         {
             _courseData = courseData;
@@ -24,9 +27,32 @@ namespace Elka.Pages.Courses
 
         public void OnGet()
         {
-
-            Courses = _courseData.GetCoursesByName(SearchTerm);
-
+            //Courses = _courseData.GetCoursesByName(SearchTerm);
+            switch (SearchChoice)
+            {
+                case 0:
+                    Courses = _courseData.GetCoursesByName(SearchTerm);
+                    break;
+                case 1:
+                    Courses = _courseData.GetCoursesByMoniker(SearchTerm);
+                    break;
+                case 2:
+                    try
+                    {
+                        Courses = _courseData.GetCoursesByEcts(SearchTerm);
+                    }
+                    catch (Exception)
+                    {
+                        Courses = _courseData.GetCoursesByName("");
+                    }
+                    break;
+                case 3:
+                    Courses = _courseData.GetCoursesByTeacherFirstName(SearchTerm);
+                    break;
+                case 4:
+                    Courses = _courseData.GetCoursesByTeacherLastName(SearchTerm);
+                    break;
+            }
         }
     }
 }
