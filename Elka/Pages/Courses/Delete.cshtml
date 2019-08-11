@@ -1,0 +1,15 @@
+﻿@page "{courseId:int}"
+@model Elka.Pages.Courses.DeleteModel
+@{
+	ViewData["Title"] = "Delete";
+}
+
+<h2>Deleting @Model.Course.Name</h2>
+<div class="alert alert-danger">
+	Are you sure you want to delete @Model.Course.Name?
+</div>
+<form method="post">
+	<button type="submit" class="btn btn-danger">Yes!</button>
+	<a asp-page="List" class="btn btn-light">Cancel</a>
+</form>
+

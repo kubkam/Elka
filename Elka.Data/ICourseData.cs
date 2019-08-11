@@ -17,5 +17,6 @@ namespace Elka.Data
         Course Add(Course newCourse);
         Course Delete(int id);
         int Commit();
+        int GetCountOfCourse();
     }
 }

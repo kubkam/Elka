@@ -106,5 +106,10 @@ namespace Elka.Data
         {
             return 0;
         }
+
+        public int GetCountOfCourse()
+        {
+            return courses.Count();
+        }
     }
 }

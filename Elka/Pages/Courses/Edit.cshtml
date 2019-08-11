@@ -1,7 +1,14 @@
 ﻿@page "{courseId:int?}"
 @model Elka.Pages.Courses.EditModel
 @{
-	ViewData["Title"] = "Edit";
+	if (Model.Course.Id > 0)
+	{
+		ViewData["Title"] = "Edit";
+	}
+	else
+	{
+		ViewData["Title"] = "Create";
+	}
 }
 
 @if (Model.Course.Id > 0)

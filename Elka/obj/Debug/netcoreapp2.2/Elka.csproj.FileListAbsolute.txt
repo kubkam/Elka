@@ -36,3 +36,6 @@ C:\Users\Kuba\Desktop\Elka\Elka\obj\Debug\netcoreapp2.2\Elka.Views.pdb
 C:\Users\Kuba\Desktop\Elka\Elka\obj\Debug\netcoreapp2.2\Elka.csproj.CopyComplete
 C:\Users\Kuba\Desktop\Elka\Elka\obj\Debug\netcoreapp2.2\Elka.dll
 C:\Users\Kuba\Desktop\Elka\Elka\obj\Debug\netcoreapp2.2\Elka.pdb
+C:\Users\Kuba\Desktop\Elka\Elka\obj\Debug\netcoreapp2.2\Razor\Pages\Courses\Delete.g.cshtml.cs
+C:\Users\Kuba\Desktop\Elka\Elka\obj\Debug\netcoreapp2.2\Razor\Pages\Courses\_Summary.g.cshtml.cs
+C:\Users\Kuba\Desktop\Elka\Elka\obj\Debug\netcoreapp2.2\Razor\Pages\Shared\Components\CourseCount\Default.g.cshtml.cs

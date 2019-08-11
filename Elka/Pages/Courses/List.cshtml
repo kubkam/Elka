@@ -1,10 +1,15 @@
 ﻿@page
 @model Elka.Pages.Courses.ListModel
 @{
-	ViewData["Title"] = "List";
+	ViewData["Title"] = "Courses";
 }
 
-<h1>Courses List</h1>
+<p>
+	<h1>Courses List</h1>
+	<a asp-page="./Edit" class="btn btn-link">Create New Course</a>
+</p>
+
+
 
 <form method="get">
 	<div class="form-group">
@@ -34,7 +39,12 @@
 	</div>
 </form>
 
-<table class="table">
+@foreach (var course in Model.Courses)
+{
+	<partial name="_Summary" model="course"/>
+}
+
+<!--<table class="table">
 	<tr style="font-weight: bold">
 		<td>Name</td>
 		<td>Moniker</td>
@@ -54,17 +64,21 @@
 			<td>@c.HowEasy</td>
 			<td>@c.InterestingLevel</td>
 			<td>
-				<a class="btn btn-lg"
+				<a class="btn btn-sm"
 				   asp-page="./Detail" asp-route-courseId="@c.Id">
-					<button class="btn btn-light">Details</button>
+					<button class="btn btn-info">Details</button>
 				</a>
-				<a class="btn btn-lg"
+				<a class="btn btn-sm"
 				   asp-page="./Edit" asp-route-courseId="@c.Id">
-					<button class="btn btn-dark">Edit</button>
+					<button class="btn btn-light">Edit</button>
+				</a>
+				<a class="btn btn-sm"
+				   asp-page="./Delete" asp-route-courseId="@c.Id">
+					<button class="btn btn-danger">Delete</button>
 				</a>
 			</td>
 		</tr>
 	}
-</table>
+</table>-->
 
 <a asp-page="./Edit" class="btn btn-primary">Add new Course</a>
