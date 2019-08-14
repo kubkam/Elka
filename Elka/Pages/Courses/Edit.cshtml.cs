@@ -30,7 +30,6 @@ namespace Elka.Pages.Courses
             else
             {
                 Course = new Course {Teacher = new Teacher()};
-
             }
             
             if (Course == null)
@@ -60,7 +59,7 @@ namespace Elka.Pages.Courses
             }
             _courseData.Commit();
 
-            return RedirectToPage("./Detail", new {courseId = Course.Id});
+            return RedirectToPage("./Details", new {courseId = Course.Id});
         }
     }
 }

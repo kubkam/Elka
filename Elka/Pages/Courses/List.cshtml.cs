@@ -27,7 +27,6 @@ namespace Elka.Pages.Courses
 
         public void OnGet()
         {
-            //Courses = _courseData.GetCoursesByName(SearchTerm);
             switch (SearchChoice)
             {
                 case 0:

@@ -9,23 +9,11 @@
 	<a asp-page="./Edit" class="btn btn-link">Create New Course</a>
 </p>
 
-
-
 <form method="get">
 	<div class="form-group">
 		<div class="input-group">
 			<input type="search" class="form-control" placeholder="Search" asp-for="SearchTerm" />
-			<!--<button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>
-			<div class="dropdown-menu">
-				<a class="dropdown-item" href="#">Course's Name</a>
-				<a class="dropdown-item" href="#">Course's Moniker</a>
-				<a class="dropdown-item" href="#">ECTS</a>
-				<a class="dropdown-item" href="#">Teacher's first name</a>
-				<a class="dropdown-item" href="#">Teacher's last name</a>
-				<div role="separator" class="dropdown-divider"></div>
-				<a class="dropdown-item" href="#">Separated link</a>
-			</div>-->
-			<select class="custom-select" id="inputGroupSelect04" asp-for="SearchChoice">
+			<select class="custom-select font-weight-bold" id="inputGroupSelect04" asp-for="SearchChoice">
 				<option value="0" selected>Course's Name</option>
 				<option value="1">Course's Moniker</option>
 				<option value="2">ECTS (please enter a number from 0 to 5)</option>
@@ -39,46 +27,44 @@
 	</div>
 </form>
 
-@foreach (var course in Model.Courses)
+<table class="table">
+	<thead>
+		<tr>
+			<th>
+				Name
+			</th>
+			<th>
+				Moniker
+			</th>
+			<th>
+				ECTS
+			</th>
+			<th>
+				Teacher
+			</th>
+			<th>
+				How easy
+			</th>
+			<th>
+				Interesting level
+			</th>
+			<!--<th>
+				Description
+			</th>-->
+			<th>	</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var course in Model.Courses)
+		{
+			<partial name="_Summary" model="course" />
+		}
+	</tbody>
+</table>
+
+<a asp-page="./Edit" class="btn btn-secondary">Add new Course</a>
+@if (Model.SearchTerm != null)
 {
-	<partial name="_Summary" model="course"/>
+	<a asp-page="./List" class="btn btn-warning">Remove all filters</a>
 }
 
-<!--<table class="table">
-	<tr style="font-weight: bold">
-		<td>Name</td>
-		<td>Moniker</td>
-		<td>ECTS</td>
-		<td>Teacher</td>
-		<td>How easy</td>
-		<td>Interesting Level</td>
-
-	</tr>
-	@foreach (var c in Model.Courses)
-	{
-		<tr>
-			<td>@c.Name</td>
-			<td>@c.Moniker</td>
-			<td>@c.ECTS</td>
-			<td>@c.Teacher.FirstName @c.Teacher.LastName</td>
-			<td>@c.HowEasy</td>
-			<td>@c.InterestingLevel</td>
-			<td>
-				<a class="btn btn-sm"
-				   asp-page="./Detail" asp-route-courseId="@c.Id">
-					<button class="btn btn-info">Details</button>
-				</a>
-				<a class="btn btn-sm"
-				   asp-page="./Edit" asp-route-courseId="@c.Id">
-					<button class="btn btn-light">Edit</button>
-				</a>
-				<a class="btn btn-sm"
-				   asp-page="./Delete" asp-route-courseId="@c.Id">
-					<button class="btn btn-danger">Delete</button>
-				</a>
-			</td>
-		</tr>
-	}
-</table>-->
-
-<a asp-page="./Edit" class="btn btn-primary">Add new Course</a>

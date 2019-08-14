@@ -76,7 +76,11 @@ namespace Elka.Data
 
         public Course Update(Course updatedCourse)
         {
+            _db.Entry(updatedCourse).State = EntityState.Modified;
             _db.Entry(updatedCourse.Teacher).State = EntityState.Modified;
+            var entity = _db.Courses.Attach(updatedCourse);
+
+            entity.State = EntityState.Modified;
 
             return updatedCourse;
         }

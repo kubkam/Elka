@@ -1,4 +1,5 @@
 ﻿@page "{courseId:int?}"
+@using Elka.Core
 @model Elka.Pages.Courses.EditModel
 @{
 	if (Model.Course.Id > 0)
@@ -65,9 +66,12 @@ else
 		<span class="text-danger" asp-validation-for="Course.Descriptions"></span>
 	</div>
 
-
-	<button type="submit" class="btn btn-primary">Save</button>
+	<button type="submit" class="btn btn-primary" asp-route-courseid="@Model.Course.Id">Save</button>
 
 	<a asp-page="./List" class="btn btn-secondary">Cancel</a>
 
 </form>
+
+@section Scripts {
+	<partial name="Shared/_ValidationScriptsPartial"/>
+}

@@ -1,56 +1,32 @@
 ﻿@using Elka.Core
 @model Course
 
-<div class="card">
-	<div class="card-header">
-		<h4>@Model.Name</h4>
-	</div>
-	<div class="card-body">
-		<dl class="row">
-			<dt class="col-sm-3">Name</dt>
-			<dd class="col-sm-9">@Model.Name</dd>
-			<dt class="col-sm-3">Moniker</dt>
-			<dd class="col-sm-9">@Model.Moniker</dd>
 
-			<dt class="col-sm-3">ECTS</dt>
-			<dd class="col-sm-9">@Model.ECTS</dd>
-
-			<dt class="col-sm-3">Teacher</dt>
-			<dd class="col-sm-9">@Model.Teacher.FirstName @Model.Teacher.LastName</dd>
-
-			<dt class="col-sm-3">ECTS</dt>
-			<dd class="col-sm-9">@Model.ECTS</dd>
-
-			<dt class="col-sm-3">How easy</dt>
-			<dd class="col-sm-9">@Model.HowEasy</dd>
-
-			<dt class="col-sm-3">Interesting level</dt>
-			<dd class="col-sm-9">@Model.InterestingLevel</dd>
-
-			<dt class="col-sm-3">Description</dt>
-			<dd class="col-sm-9">@Model.Descriptions</dd>
-		</dl>
-
-		<!--<span><b>Name:</b> @Model.Name</span>
-	<span><b>Moniker:</b> @Model.Moniker</span>
-	<span><b>ECTS:</b> @Model.ECTS</span>
-	<span><b>Teacher:</b> @Model.Teacher.FirstName @Model.Teacher.LastName</span>
-	<span><b>How easy:</b> @Model.HowEasy</span>
-	<span><b>Interesting level:</b> @Model.InterestingLevel</span>-->
-	</div>
-	<div class="card-footer">
-		<a class="btn btn-sm"
-		   asp-page="./Detail" asp-route-courseId="@Model.Id">
-			<button class="btn btn-info">Details</button>
-		</a>
-		<a class="btn btn-sm"
-		   asp-page="./Edit" asp-route-courseId="@Model.Id">
-			<button class="btn btn-light">Edit</button>
-		</a>
-		<a class="btn btn-sm"
-		   asp-page="./Delete" asp-route-courseId="@Model.Id">
-			<button class="btn btn-danger">Delete</button>
-		</a>
-	</div>
-</div>
-<br />
+<tr>
+	<td>
+		@Model.Name
+	</td>
+	<td>
+		@Model.Moniker
+	</td>
+	<td>
+		@Model.ECTS
+	</td>
+	<td>
+		@Model.Teacher.FirstName @Model.Teacher.LastName
+	</td>
+	<td>
+		@Model.HowEasy
+	</td>
+	<td>
+		@Model.InterestingLevel
+	</td>
+	<!--<td>
+		@Model.Descriptions
+	</td>-->
+	<td>
+		<a asp-page="./Edit" asp-route-courseid="@Model.Id">Edit</a> |
+		<a asp-page="./Details" asp-route-courseid="@Model.Id">Details</a> |
+		<a asp-page="./Delete" asp-route-courseid="@Model.Id">Delete</a>
+	</td>
+</tr>

@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Elka.Pages.Courses
 {
-    public class DetailModel : PageModel
+    public class DetailsModel : PageModel
     {
         private readonly ICourseData _courseData;
         public Course Course { get; set; }
@@ -13,7 +13,7 @@ namespace Elka.Pages.Courses
         [TempData]
         public string Message { get; set; }
 
-        public DetailModel(ICourseData courseData)
+        public DetailsModel(ICourseData courseData)
         {
             _courseData = courseData;
         }
