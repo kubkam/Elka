@@ -82,3 +82,4 @@ C:\Users\Kuba\Desktop\Elka\Elka\obj\Debug\netcoreapp2.2\Elka.Views.pdb
 C:\Users\Kuba\Desktop\Elka\Elka\obj\Debug\netcoreapp2.2\Elka.csproj.CopyComplete
 C:\Users\Kuba\Desktop\Elka\Elka\obj\Debug\netcoreapp2.2\Elka.dll
 C:\Users\Kuba\Desktop\Elka\Elka\obj\Debug\netcoreapp2.2\Elka.pdb
+C:\Users\Kuba\Desktop\Elka\Elka\obj\Debug\netcoreapp2.2\Razor\Pages\Contact.g.cshtml.cs

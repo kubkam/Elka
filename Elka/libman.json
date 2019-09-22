@@ -37,6 +37,10 @@
         "js/jquery.dataTables.js",
         "js/jquery.dataTables.min.js"
       ]
+    },
+    {
+      "library": "font-awesome@5.10.2",
+      "destination": "wwwroot/lib/font-awesome/"
     }
   ]
 }
