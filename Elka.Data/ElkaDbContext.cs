@@ -11,7 +11,6 @@ namespace Elka.Data
         public ElkaDbContext(DbContextOptions<ElkaDbContext> options)
             : base(options)
         {
-            
         }
 
         public DbSet<Course> Courses { get; set; }

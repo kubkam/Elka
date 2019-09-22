@@ -13,7 +13,9 @@
 		@Model.ECTS
 	</td>
 	<td>
-		@Model.Teacher.FirstName @Model.Teacher.LastName
+		@Model.Teacher.FirstName
+	<td>
+		@Model.Teacher.LastName
 	</td>
 	<td>
 		@Model.HowEasy
@@ -21,9 +23,7 @@
 	<td>
 		@Model.InterestingLevel
 	</td>
-	<!--<td>
-		@Model.Descriptions
-	</td>-->
+	<!--<td>@Model.Descriptions</td>-->
 	<td>
 		<a asp-page="./Edit" asp-route-courseid="@Model.Id">Edit</a> |
 		<a asp-page="./Details" asp-route-courseid="@Model.Id">Details</a> |

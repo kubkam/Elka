@@ -49,6 +49,11 @@ namespace Elka.Data
         {
             var _ects = int.Parse(ects);
 
+            if (_ects < 0)
+            {
+                _ects = 0;
+            }
+
             var query = _db.Courses
                 .Include(c => c.Teacher)
                 .Where(c => c.ECTS == _ects)

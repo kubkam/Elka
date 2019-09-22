@@ -29,7 +29,7 @@ namespace Elka.Pages.Courses
         {
             switch (SearchChoice)
             {
-                case 0:
+                default:
                     Courses = _courseData.GetCoursesByName(SearchTerm);
                     break;
                 case 1:
