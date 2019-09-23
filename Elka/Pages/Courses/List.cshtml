@@ -51,9 +51,6 @@
 			<th>
 				Interesting level
 			</th>
-			<!--<th>
-		Description
-	</th>-->
 			<th>
 				Action
 			</th>
@@ -89,7 +86,8 @@
 		$(document).ready(function() {
 			$('#course').DataTable({
 				processing: true,
-				"searching": false
+				"searching": false,
+				"scrollX": true
 			});
 			}
 		);

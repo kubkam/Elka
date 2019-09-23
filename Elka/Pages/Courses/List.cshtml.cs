@@ -36,14 +36,7 @@ namespace Elka.Pages.Courses
                     Courses = _courseData.GetCoursesByMoniker(SearchTerm);
                     break;
                 case 2:
-                    try
-                    {
-                        Courses = _courseData.GetCoursesByEcts(SearchTerm);
-                    }
-                    catch (Exception)
-                    {
-                        Courses = _courseData.GetCoursesByName("");
-                    }
+                    Courses = _courseData.GetCoursesByEcts(SearchTerm);
                     break;
                 case 3:
                     Courses = _courseData.GetCoursesByTeacherFirstName(SearchTerm);

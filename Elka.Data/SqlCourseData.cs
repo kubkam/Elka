@@ -47,19 +47,18 @@ namespace Elka.Data
 
         public IEnumerable<Course> GetCoursesByEcts(string ects)
         {
-            var _ects = int.Parse(ects);
+            int _ects;
 
-            if (_ects < 0)
+            if (Int32.TryParse(ects, out _ects) && _ects >= 0)
             {
-                _ects = 0;
+                var query = _db.Courses
+                    .Include(c => c.Teacher)
+                    .Where(c => c.ECTS == _ects)
+                    .OrderBy(c => c.Name);
+
+                return query;
             }
-
-            var query = _db.Courses
-                .Include(c => c.Teacher)
-                .Where(c => c.ECTS == _ects)
-                .OrderBy(c => c.Name);
-
-            return query;
+            return new List<Course>();
         }
 
         public IEnumerable<Course> GetCoursesByMoniker(string moniker)
