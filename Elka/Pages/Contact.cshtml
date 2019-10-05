@@ -1,0 +1,48 @@
+﻿@page
+@model Elka.Pages.ContactModel
+@{
+	ViewData["Title"] = "Contact";
+}
+
+<h1>Contact</h1>
+
+<span style="font-size: 48px">
+	<a href="mailto:kuba.kamoda@gmail.com"><i class="far fa-envelope" style="color: #000000;"></i></a>
+	<span style="font-size: 20px; color: black">
+		<a href="mailto:kuba.kamoda@gmail.com" style="color: black">kuba.kamoda at gmail.com</a>
+	</span>
+</span>
+
+<br />
+
+<span style="font-size: 48px">
+	<a href="https://github.com/kubkam"><i class="fab fa-github" style="color: #000000;"></i></a>
+	<span style="font-size: 20px; color: black">
+		<a href="https://github.com/kubkam" style="color: black">github.com/kubkam</a>
+	</span>
+</span>
+
+<br />
+
+<span style="font-size: 48px">
+	<a href="https://https://linkedin.com/in/kuba-kamoda/"><i class="fab fa-linkedin" style="color: #1e90ff;"></i></a>
+	<span style="font-size: 20px; color: black">
+		<a href="https://linkedin.com/in/kuba-kamoda/" style="color: black">linkedin.com/in/kuba-kamoda</a>
+	</span>
+</span>
+
+@section Scripts
+	{
+	<environment include="Development">
+		<link href="~/lib/font-awesome/css/all.min.css" rel="stylesheet" />
+		<link href="~/lib/font-awesome/css/fontawesome.css" rel="stylesheet" />
+	</environment>
+	<environment exclude="Development">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/fontawesome.css" />
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/js/all.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/js/fontawesome.js"></script>
+	</environment>
+}
+
+

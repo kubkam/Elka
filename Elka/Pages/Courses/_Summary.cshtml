@@ -1,0 +1,31 @@
+﻿@using Elka.Core
+@model Course
+
+
+<tr>
+	<td>
+		@Model.Name
+	</td>
+	<td>
+		@Model.Moniker
+	</td>
+	<td>
+		@Model.ECTS
+	</td>
+	<td>
+		@Model.Teacher.FirstName
+	<td>
+		@Model.Teacher.LastName
+	</td>
+	<td>
+		@Model.HowEasy
+	</td>
+	<td>
+		@Model.InterestingLevel
+	</td>
+	<td>
+		<a asp-page="./Edit" asp-route-courseid="@Model.Id">Edit</a> |
+		<a asp-page="./Details" asp-route-courseid="@Model.Id">Details</a> |
+		<a asp-page="./Delete" asp-route-courseid="@Model.Id">Delete</a>
+	</td>
+</tr>

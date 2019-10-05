@@ -1,0 +1,17 @@
+C:\Users\Kuba\Desktop\Elka22\Elka\Elka.Core\bin\Debug\netcoreapp2.2\Elka.Core.deps.json
+C:\Users\Kuba\Desktop\Elka22\Elka\Elka.Core\bin\Debug\netcoreapp2.2\Elka.Core.dll
+C:\Users\Kuba\Desktop\Elka22\Elka\Elka.Core\bin\Debug\netcoreapp2.2\Elka.Core.pdb
+C:\Users\Kuba\Desktop\Elka22\Elka\Elka.Core\obj\Debug\netcoreapp2.2\Elka.Core.csproj.CoreCompileInputs.cache
+C:\Users\Kuba\Desktop\Elka22\Elka\Elka.Core\obj\Debug\netcoreapp2.2\Elka.Core.AssemblyInfoInputs.cache
+C:\Users\Kuba\Desktop\Elka22\Elka\Elka.Core\obj\Debug\netcoreapp2.2\Elka.Core.AssemblyInfo.cs
+C:\Users\Kuba\Desktop\Elka22\Elka\Elka.Core\obj\Debug\netcoreapp2.2\Elka.Core.dll
+C:\Users\Kuba\Desktop\Elka22\Elka\Elka.Core\obj\Debug\netcoreapp2.2\Elka.Core.pdb
+C:\Users\Kuba\Desktop\Elka\Elka.Core\bin\Debug\netcoreapp2.2\Elka.Core.deps.json
+C:\Users\Kuba\Desktop\Elka\Elka.Core\bin\Debug\netcoreapp2.2\Elka.Core.dll
+C:\Users\Kuba\Desktop\Elka\Elka.Core\bin\Debug\netcoreapp2.2\Elka.Core.pdb
+C:\Users\Kuba\Desktop\Elka\Elka.Core\obj\Debug\netcoreapp2.2\Elka.Core.csproj.CoreCompileInputs.cache
+C:\Users\Kuba\Desktop\Elka\Elka.Core\obj\Debug\netcoreapp2.2\Elka.Core.AssemblyInfoInputs.cache
+C:\Users\Kuba\Desktop\Elka\Elka.Core\obj\Debug\netcoreapp2.2\Elka.Core.AssemblyInfo.cs
+C:\Users\Kuba\Desktop\Elka\Elka.Core\obj\Debug\netcoreapp2.2\Elka.Core.dll
+C:\Users\Kuba\Desktop\Elka\Elka.Core\obj\Debug\netcoreapp2.2\Elka.Core.pdb
+C:\Users\Kuba\Desktop\Elka\Elka.Core\obj\Debug\netcoreapp2.2\Elka.Core.csprojAssemblyReference.cache

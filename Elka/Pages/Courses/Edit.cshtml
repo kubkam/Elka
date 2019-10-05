@@ -1,0 +1,77 @@
+﻿@page "{courseId:int?}"
+@using Elka.Core
+@model Elka.Pages.Courses.EditModel
+@{
+	if (Model.Course.Id > 0)
+	{
+		ViewData["Title"] = "Edit";
+	}
+	else
+	{
+		ViewData["Title"] = "Create";
+	}
+}
+
+@if (Model.Course.Id > 0)
+{
+	<h2>Editing @Model.Course.Name</h2>
+}
+else
+{
+	<h2>Creating new Course</h2>
+}
+
+<form method="post">
+	<input type="hidden" asp-for="Course.Id" />
+	<div class="form-group">
+		<label asp-for="Course.Name">Course's Name</label>
+		<input asp-for="Course.Name" class="form-control" />
+		<span class="text-danger" asp-validation-for="Course.Name"></span>
+	</div>
+	<div class="form-group">
+		<label asp-for="Course.Moniker">Course's Moniker</label>
+		<input asp-for="Course.Moniker" class="form-control" />
+		<span class="text-danger" asp-validation-for="Course.Moniker"></span>
+	</div>
+	<div class="form-group">
+		<label asp-for="Course.ECTS"></label>
+		<input asp-for="Course.ECTS" class="form-control" />
+		<span class="text-danger" asp-validation-for="Course.ECTS"></span>
+	</div>
+	<div class="form-group">
+		<label asp-for="Course.HowEasy">How easy is this course?</label>
+		<input asp-for="Course.HowEasy" class="form-control" />
+		<span class="text-danger" asp-validation-for="Course.HowEasy"></span>
+	</div>
+	<div class="form-group">
+		<label asp-for="Course.InterestingLevel">How interesting is this course?</label>
+		<input asp-for="Course.InterestingLevel" class="form-control" />
+		<span class="text-danger" asp-validation-for="Course.InterestingLevel"></span>
+	</div>
+
+	<input type="hidden" asp-for="Course.Teacher.Id" />
+	<div class="form-group">
+		<label asp-for="Course.Teacher.FirstName">Teacher's first name</label>
+		<input asp-for="Course.Teacher.FirstName" class="form-control" />
+		<span class="text-danger" asp-validation-for="Course.Teacher.FirstName"></span>
+	</div>
+	<div class="form-group">
+		<label asp-for="Course.Teacher.LastName">Teacher's last name</label>
+		<input asp-for="Course.Teacher.LastName" class="form-control" />
+		<span class="text-danger" asp-validation-for="Course.Teacher.LastName"></span>
+	</div>
+	<div class="form-group">
+		<label asp-for="Course.Descriptions">Description</label>
+		<input asp-for="Course.Descriptions" class="form-control" />
+		<span class="text-danger" asp-validation-for="Course.Descriptions"></span>
+	</div>
+
+	<button type="submit" class="btn btn-primary" asp-route-courseid="@Model.Course.Id">Save</button>
+
+	<a asp-page="./List" class="btn btn-secondary">Cancel</a>
+
+</form>
+
+@section Scripts {
+	<partial name="Shared/_ValidationScriptsPartial"/>
+}
