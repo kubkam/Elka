@@ -2,6 +2,8 @@
 
 Elka is a simple CRUD web application for browsing courses which you attend at your university or school. What you need is add new course on website and then easily browse through them.
 
+This web application is with [ASP.NET Core 2.2](https://dotnet.microsoft.com/download/dotnet-core/2.2 "ASP.NET CORE 2.2") and [EF Core](https://docs.microsoft.com/en-us/ef/core "EF CORE").
+
 ## Database
 
 To load the database you should go to SQL_scripts folder. You will see 1 SQL script file:
